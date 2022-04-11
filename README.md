@@ -235,3 +235,9 @@ Run the application which will be listening on port `5000`.
 ```console
 $ dotnet run --project JOIEnergy
 ```
+
+### Running the application in docker container in Release configuration
+
+```console
+$ docker build -t joienergy JOIEnergy/ && docker run -p 8081:80 joienergy
+```
