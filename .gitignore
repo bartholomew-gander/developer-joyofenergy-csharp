@@ -261,3 +261,7 @@ __pycache__/
 *.pyc
 
 *.vscode
+
+### Code coverage directory
+
+coveragereport/

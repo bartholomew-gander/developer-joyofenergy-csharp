@@ -105,6 +105,12 @@ namespace JOIEnergy.Tests
             Assert.Equal(404, controller.CalculatedCostForEachPricePlan("not-found").StatusCode);
         }
 
+        [Fact]
+        public void GivenNoMatchingMeterIdRecommendedShouldReturnNotFound()
+        {
+            Assert.Equal(404, controller.RecommendCheapestPricePlans("not-found", null).StatusCode);
+        }
+
         private static List<PeakTimeMultiplier> NoMultipliers()
         {
             return new List<PeakTimeMultiplier>();
